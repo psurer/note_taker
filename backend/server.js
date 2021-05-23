@@ -37,13 +37,13 @@ const deleteNote = function (req, res) {
 }
 
 app.get('', (req, res) =>{
-    res.sendFile(path.normalize( __dirname + '\\..\\public\\index.html'));
+    res.sendFile(path.normalize( __dirname + '/../public/index.html'));
 });
 app.get('/notes', (req,res)=>{
-    res.sendFile(path.normalize( __dirname + '\\..\\public\\notes.html'));
+    res.sendFile(path.normalize( __dirname + '/../public/notes.html'));
 });
 app.get('/assets/js/index.js', (req,res)=>{
-    res.sendFile(path.normalize( __dirname + '\\..\\public\\assets\\js\\index.js'));
+    res.sendFile(path.normalize( __dirname + '/../public/assets/js/index.js'));
 });
 
 app.get('/api/notes', returnNotes);
@@ -90,7 +90,7 @@ function removeNote(noteId, callback){
 
 function retriveDataFromFile(callback){
     let allNotes = [];
-    fs.readFile(path.normalize(__dirname + '\\..\\db\\db.json'), function (err,data){
+    fs.readFile(path.normalize(__dirname + '/../db/db.json'), function (err,data){
         if (err || data.length === 0) {
             allNotes = []
         } else {
@@ -101,7 +101,7 @@ function retriveDataFromFile(callback){
 }
 
 function saveDataToFile(data, callback){
-    fs.writeFile(path.normalize(__dirname + '\\..\\db\\db.json'), JSON.stringify(data), (err) => callback(err) );
+    fs.writeFile(path.normalize(__dirname + '/../db/db.json'), JSON.stringify(data), (err) => callback(err) );
 }
 
 //Helper functions
