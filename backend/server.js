@@ -113,34 +113,3 @@ function removeItemFromArray(arr, value) {
     }
     return arr;
   }
-
-
-/*
-const sayInEnglish = function (bla) { // bla is of type string
-    console.log(`you said ${bla}`);
-}
-
-const sayInFrench = function (bla) { // bla is of type string
-    console.log(`fasdlkfjds ${bla}`);
-}
-
-// theFunctionYoWantToCall has to be like this (string) => {}
-// (string) => {}; function ANY_NAME (string){};
-// first one string, second one a function with a string parameter
-// Function signature: List and type of parameters.
-function speaker(whatDoyouWantToSay, theFunctionYoWantToCall){ 
-    theFunctionYoWantToCall(whatDoyouWantToSay);
-}
-
-speaker('hello', sayInEnglish);
-speaker('hello', sayInFrench);
-
-
-//How to defined a function in JS
-
-/*
-    function  FUNCTION_NAME(hola){
-    }
-    const/var/let FUNCTION_NAME = function (hola) {}; 
-    const/var/let FUNCTION_NAME = (hola) => {};
-*/
